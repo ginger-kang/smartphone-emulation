@@ -10,8 +10,12 @@ function Alarm({ $app }) {
     alarmInput.setState(this.alarmInputDisplay);
   };
 
-  const $target = document.createElement("section");
-  $target.id = "alarm-container";
+  const onAlarmInputSubmit = inputAlarmData => {
+    this.setState([...this.alarmList, inputAlarmData]);
+  };
+
+  this.$target = document.createElement("section");
+  this.$target.id = "alarm-container";
 
   const newButton = document.createElement("button");
   newButton.id = "new-button";
@@ -19,13 +23,14 @@ function Alarm({ $app }) {
   newButton.addEventListener("click", () => alarmInputDisplayHandler(true));
 
   const alarmInput = new AlarmInput({
-    $target,
+    $target: this.$target,
     alarmInputDisplay: this.alarmInputDisplay,
     alarmInputDisplayHandler,
+    onAlarmInputSubmit,
   });
 
-  $target.appendChild(newButton);
-  $app.appendChild($target);
+  this.$target.appendChild(newButton);
+  $app.appendChild(this.$target);
 
   this.setState = nextState => {
     this.alarmList = nextState;
@@ -34,13 +39,18 @@ function Alarm({ $app }) {
   };
 
   this.render = () => {
+    const prevList = document.querySelector("#alarm-list-wrapper");
+    if (prevList) {
+      prevList.remove();
+    }
+
     const alarmListWrapper = document.createElement("ul");
     alarmListWrapper.id = "alarm-list-wrapper";
     alarmListWrapper.innerHTML = this.alarmList
       .map(alarm => `<li class="alarm-list">${alarm}</li>`)
       .join("");
 
-    $target.appendChild(alarmListWrapper);
+    this.$target.appendChild(alarmListWrapper);
   };
 
   this.render();

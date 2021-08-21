@@ -5,7 +5,7 @@ body {
 
 header {
   width: 100%;
-  height: 20px;
+  height: 30px;
   position: relative;
 }
 
@@ -36,7 +36,7 @@ header {
   padding: 3px 5px;
   background-color: white;
   color: #08428f;
-  border: #08428f;
+  border: 1px solid #08428f;
   border-radius: 5px;
 }
 
@@ -47,13 +47,14 @@ header {
   padding: 3px 5px;
   background-color: white;
   color: #08428f;
-  border: #08428f;
+  border: 1px solid #08428f;
   border-radius: 5px;
 }
 
 #alarm-list-wrapper {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .alarm-list {
@@ -65,4 +66,21 @@ header {
 
 .alarm-list:last-child {
   border-bottom: 1px solid #08428f;
+}
+
+#alarm-input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 5px;
+  background-color: white;
+  border-top: 1px solid #08428f;
+}
+
+#alarm-save-button {
+  padding: 3px 5px;
+  background-color: white;
+  color: #08428f;
+  border: 1px solid #08428f;
+  border-radius: 5px;
 }
