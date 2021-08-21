@@ -15,6 +15,12 @@ function Alarm({ $app }) {
     this.setState([...this.alarmList, inputAlarmData]);
   };
 
+  const onRemoveClick = e => {
+    const removeAlarm = e.target.parentNode.childNodes[1].textContent;
+
+    this.setState(this.alarmList.filter(alarm => alarm !== removeAlarm));
+  };
+
   this.$target = document.createElement("section");
   this.$target.id = "alarm-container";
 
@@ -47,8 +53,16 @@ function Alarm({ $app }) {
 
     const alarmListWrapper = document.createElement("ul");
     alarmListWrapper.id = "alarm-list-wrapper";
+    alarmListWrapper.addEventListener("click", e => onRemoveClick(e));
     alarmListWrapper.innerHTML = this.alarmList
-      .map(alarm => `<li class="alarm-list">${alarm}</li>`)
+      .map(
+        alarm => `
+          <li class="alarm-list">
+            <span class="alarm-list-text">${alarm}</span>
+            <button id="remove-button">삭제</button>
+          </li>
+        `,
+      )
       .join("");
 
     this.$target.appendChild(alarmListWrapper);

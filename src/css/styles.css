@@ -20,7 +20,7 @@ header {
 }
 
 #clock-wrapper {
-  width: 220px;
+  width: 230px;
   position: absolute;
   left: 50%;
   top: 5px;
@@ -58,6 +58,9 @@ header {
 }
 
 .alarm-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 5px 15px;
   background-color: white;
   border-top: 1px solid #08428f;
@@ -72,7 +75,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 5px;
+  padding: 15px 15px 15px 10px;
   background-color: white;
   border-top: 1px solid #08428f;
 }
@@ -82,5 +85,13 @@ header {
   background-color: white;
   color: #08428f;
   border: 1px solid #08428f;
+  border-radius: 5px;
+}
+
+#remove-button {
+  padding: 3px 5px;
+  background-color: white;
+  color: #ff0000;
+  border: 1px solid #ff0000;
   border-radius: 5px;
 }
