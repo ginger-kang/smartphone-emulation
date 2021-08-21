@@ -1,3 +1,5 @@
+import { HOUR_OPTIONS, MINUTE_OPTIONS } from "../constant.js";
+
 function AlarmInput({
   $target,
   alarmInputDisplay,
@@ -29,20 +31,7 @@ function AlarmInput({
     <select name="hour" id="hour-select">
   `;
 
-  [
-    "01",
-    "02",
-    "03",
-    "04",
-    "05",
-    "06",
-    "07",
-    "08",
-    "09",
-    "10",
-    "11",
-    "12",
-  ].forEach(hour => {
+  HOUR_OPTIONS.forEach(hour => {
     if (hour === "01") {
       timeSelect += `
         <option value=${hour} selected>${hour}</option>  
@@ -60,7 +49,7 @@ function AlarmInput({
     <select name="minute" id="minute-select">
   `;
 
-  ["00", "10", "20", "30", "40", "50"].forEach(minute => {
+  MINUTE_OPTIONS.forEach(minute => {
     if (minute === "00") {
       timeSelect += `
         <option value=${minute} selected>${minute}</option>

@@ -1,4 +1,5 @@
 import AlarmInput from "./AlarmInput.js";
+import { NEW } from "../constant.js";
 
 function Alarm({ $app }) {
   this.alarmList = ["kagura", "gintoki", "okita"];
@@ -19,7 +20,7 @@ function Alarm({ $app }) {
 
   const newButton = document.createElement("button");
   newButton.id = "new-button";
-  newButton.innerText = "NEW";
+  newButton.innerText = NEW;
   newButton.addEventListener("click", () => alarmInputDisplayHandler(true));
 
   const alarmInput = new AlarmInput({

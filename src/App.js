@@ -1,6 +1,7 @@
 import Alarm from "./components/Alarm.js";
 import Header from "./components/Header.js";
 import Home from "./components/Home.js";
+import { HOME, ALARM } from "./constant.js";
 
 const cleanApps = $app => {
   if ($app.childNodes.length > 1) {
@@ -10,7 +11,7 @@ const cleanApps = $app => {
 
 export default function App($app) {
   this.state = {
-    pageName: "home",
+    pageName: HOME,
   };
 
   const routeHandler = name => {
@@ -36,9 +37,9 @@ export default function App($app) {
 
   this.render = () => {
     cleanApps($app);
-    if (this.state.pageName === "home") {
+    if (this.state.pageName === HOME) {
       new Home({ $app, routeHandler });
-    } else if (this.state.pageName === "alarm") {
+    } else if (this.state.pageName === ALARM) {
       new Alarm({ $app });
     }
   };

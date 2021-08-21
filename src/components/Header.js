@@ -1,4 +1,5 @@
 import Clock from "./Clock.js";
+import { HOME, BACK } from "../constant.js";
 
 function Header({ $app, pageName, routeHandler }) {
   this.pageName = pageName;
@@ -17,14 +18,14 @@ function Header({ $app, pageName, routeHandler }) {
 
     const backButton = document.createElement("button");
     backButton.id = "back-button";
-    backButton.innerText = "BACK";
-    backButton.addEventListener("click", () => routeHandler("home"));
+    backButton.innerText = BACK;
+    backButton.addEventListener("click", () => routeHandler(HOME));
 
     new Clock({ $target: this.$target });
 
     this.$target.appendChild(backButton);
 
-    if (this.pageName === "home") {
+    if (this.pageName === HOME) {
       this.$target.removeChild(backButton);
     }
   };
