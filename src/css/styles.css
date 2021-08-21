@@ -9,6 +9,10 @@ header {
   position: relative;
 }
 
+#home-container {
+  margin-top: 25px;
+}
+
 #app {
   width: 100vw;
   height: 100vh;
@@ -45,4 +49,20 @@ header {
   color: #08428f;
   border: #08428f;
   border-radius: 5px;
+}
+
+#alarm-list-wrapper {
+  list-style: none;
+  padding: 0;
+}
+
+.alarm-list {
+  padding: 5px 15px;
+  background-color: white;
+  border-top: 1px solid #08428f;
+  font-size: medium;
+}
+
+.alarm-list:last-child {
+  border-bottom: 1px solid #08428f;
 }

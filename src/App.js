@@ -1,3 +1,4 @@
+import Alarm from "./components/Alarm.js";
 import Header from "./components/Header.js";
 import Home from "./components/Home.js";
 
@@ -16,6 +17,7 @@ export default function App($app) {
     this.setState({
       ...this.state,
       pageName: name,
+      isNewButtonClick: false,
     });
   };
 
@@ -36,6 +38,8 @@ export default function App($app) {
     cleanApps($app);
     if (this.state.pageName === "home") {
       new Home({ $app, routeHandler });
+    } else if (this.state.pageName === "alarm") {
+      new Alarm({ $app });
     }
   };
 
