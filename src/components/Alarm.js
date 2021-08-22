@@ -1,8 +1,9 @@
 import AlarmInput from "./AlarmInput.js";
-import { NEW } from "../constant.js";
+import { getItem, setItem } from "../localStorage.js";
+import { NEW, ALARM_LIST } from "../constant.js";
 
 function Alarm({ $app }) {
-  this.alarmList = ["kagura", "gintoki", "okita"];
+  this.alarmList = getItem(ALARM_LIST) ?? [];
   this.alarmInputDisplay = false;
 
   const alarmInputDisplayHandler = display => {
@@ -41,6 +42,7 @@ function Alarm({ $app }) {
 
   this.setState = nextState => {
     this.alarmList = nextState;
+    setItem(ALARM_LIST, nextState);
 
     this.render();
   };

@@ -1,5 +1,6 @@
 const HOME = "home";
 const ALARM = "alarm";
+const ALARM_LIST = "alarm-list";
 const MEMO = "memo";
 const PHOTO = "photo";
 const NEW = "NEW";
@@ -20,4 +21,14 @@ const HOUR_OPTIONS = [
   "12",
 ];
 
-export { HOME, ALARM, MEMO, PHOTO, NEW, BACK, MINUTE_OPTIONS, HOUR_OPTIONS };
+export {
+  HOME,
+  ALARM,
+  ALARM_LIST,
+  MEMO,
+  PHOTO,
+  NEW,
+  BACK,
+  MINUTE_OPTIONS,
+  HOUR_OPTIONS,
+};
