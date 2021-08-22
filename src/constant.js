@@ -22,6 +22,18 @@ const HOUR_OPTIONS = [
   "11",
   "12",
 ];
+const PHOTO_LIST = [
+  "biei.jpg",
+  "gintama.jpeg",
+  "home.png",
+  "huji.jpeg",
+  "kamakura.jpeg",
+  "ocean.jpg",
+  "sakura.jpeg",
+  "shibuya.jpeg",
+  "sunset.jpg",
+  "windmill.png",
+];
 
 export {
   HOME,
@@ -35,4 +47,5 @@ export {
   ENTER_MEMO,
   MINUTE_OPTIONS,
   HOUR_OPTIONS,
+  PHOTO_LIST,
 };

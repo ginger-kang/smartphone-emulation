@@ -1,18 +1,7 @@
-const photos = [
-  "biei.jpg",
-  "gintama.jpeg",
-  "home.png",
-  "huji.jpeg",
-  "kamakura.jpeg",
-  "ocean.jpg",
-  "sakura.jpeg",
-  "shibuya.jpeg",
-  "sunset.jpg",
-  "windmill.png",
-];
+import { PHOTO_LIST } from "../constant.js";
 
 function Photo({ $app }) {
-  this.photoList = photos;
+  this.photoList = PHOTO_LIST;
   this.selectedPhoto = 0;
 
   this.$target = document.createElement("section");
