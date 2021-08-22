@@ -23,13 +23,13 @@ const HOUR_OPTIONS = [
   "12",
 ];
 const PHOTO_LIST = [
-  "biei.jpg",
+  "tree.jpg",
   "gintama.jpeg",
-  "home.png",
   "huji.jpeg",
   "kamakura.jpeg",
+  "biei.jpg",
   "ocean.jpg",
-  "sakura.jpeg",
+  "home.png",
   "shibuya.jpeg",
   "sunset.jpg",
   "windmill.png",

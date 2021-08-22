@@ -1,3 +1,4 @@
+import SelectedPhoto from "./SelectedPhoto.js";
 import { PHOTO_LIST } from "../constant.js";
 
 function Photo({ $app }) {
@@ -22,11 +23,18 @@ function Photo({ $app }) {
     .join("");
 
   this.$target.appendChild(photoListWrapper);
+
+  const selectedPhoto = new SelectedPhoto({
+    $target: this.$target,
+    selectedPhoto: this.selectedPhoto,
+  });
+
   $app.appendChild(this.$target);
 
   const onPhotoClick = e => {
     const parent = document.querySelector("#photo-list-wrapper");
     let idx;
+    if (parent === e.target) return;
 
     for (let i = 0; i < parent.children.length; i++) {
       if (parent.children[i].classList.contains("selected")) {
@@ -43,6 +51,7 @@ function Photo({ $app }) {
   this.setState = nextState => {
     this.selectedPhoto = nextState;
 
+    selectedPhoto.setState(this.selectedPhoto);
     this.render();
   };
 

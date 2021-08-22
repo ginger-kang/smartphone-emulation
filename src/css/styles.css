@@ -146,3 +146,16 @@ header {
   border: 5px solid hotpink;
   border-radius: 11px;
 }
+
+#selected-photo-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+#selected-photo-wrapper img {
+  width: 100%;
+  object-fit: cover;
+}
