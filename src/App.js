@@ -1,7 +1,8 @@
 import Alarm from "./components/Alarm.js";
 import Header from "./components/Header.js";
 import Home from "./components/Home.js";
-import { HOME, ALARM } from "./constant.js";
+import Memo from "./components/Memo.js";
+import { HOME, ALARM, MEMO } from "./constant.js";
 
 export default function App($app) {
   this.state = {
@@ -41,6 +42,8 @@ export default function App($app) {
       new Home({ $app, routeHandler });
     } else if (this.state.pageName === ALARM) {
       new Alarm({ $app });
+    } else if (this.state.pageName === MEMO) {
+      new Memo({ $app });
     }
   };
 

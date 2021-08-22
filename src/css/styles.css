@@ -51,7 +51,8 @@ header {
   border-radius: 5px;
 }
 
-#alarm-list-wrapper {
+#alarm-list-wrapper,
+#memo-list-wrapper {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -94,4 +95,15 @@ header {
   color: #ff0000;
   border: 1px solid #ff0000;
   border-radius: 5px;
+}
+
+.memo-list {
+  padding: 2px;
+  background-color: white;
+  border-top: 1px solid #08428f;
+  font-size: medium;
+}
+
+.memo-list:last-child {
+  border-bottom: 1px solid #08428f;
 }
