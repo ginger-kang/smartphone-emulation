@@ -32,3 +32,39 @@
   - 사진 리스트는 가로 스크롤
   - 리스트에서 사진을 클릭하면 해당 사진 선택 표시
   - 선택된 사진은 하단에 표시, 가로 세로 중앙 정렬이며 화면에 딱 맞게 나와야함
+
+## ⛓ 파일 구조
+
+```plaintext
+├── src
+│   │
+│   ├── components
+│   │   │
+│   │   └── Alarm.js
+│   │   │
+│   │   └── AlarmInput.js
+│   │   │
+│   │   └── Clock.js
+│   │   │
+│   │   └── Header.js
+│   │   │
+│   │   └── Home.js
+│   │   │
+│   │   └── Memo.js
+│   │   │
+│   │   └── MemoInput.js
+│   │
+│   ├── css
+│   │   │
+│   │   └── styles.css
+│   │
+│   ├── App.js
+│   │
+│   ├── constants.js
+│   │
+│   ├── localStorage.js
+│   │
+│   └── main.js
+│
+└── index.html
+```
