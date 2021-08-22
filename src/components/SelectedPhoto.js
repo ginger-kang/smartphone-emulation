@@ -1,4 +1,4 @@
-import { PHOTO_LIST } from "../constant.js";
+import { PHOTO_LIST } from "../util/constant.js";
 
 function SelectedPhoto({ $target, selectedPhoto }) {
   this.selectedPhoto = selectedPhoto;

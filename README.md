@@ -40,31 +40,35 @@
 │   │
 │   ├── components
 │   │   │
-│   │   └── Alarm.js
+│   │   ├── Alarm.js
 │   │   │
-│   │   └── AlarmInput.js
+│   │   ├── AlarmInput.js
 │   │   │
-│   │   └── Clock.js
+│   │   ├── Clock.js
 │   │   │
-│   │   └── Header.js
+│   │   ├── Header.js
 │   │   │
-│   │   └── Home.js
+│   │   ├── Home.js
 │   │   │
-│   │   └── Memo.js
+│   │   ├── Memo.js
 │   │   │
-│   │   └── MemoInput.js
+│   │   ├── MemoInput.js
 │   │   │
-│   │   └── Photo.js
+│   │   ├── Photo.js
+│   │   │
+│   │   └── SelectedPhoto.js
 │   │
 │   ├── css
 │   │   │
 │   │   └── styles.css
 │   │
+│   ├── util
+│   │   │
+│   │   ├── constants.js
+│   │   │
+│   │   └── localStorage.js
+│   │
 │   ├── App.js
-│   │
-│   ├── constants.js
-│   │
-│   ├── localStorage.js
 │   │
 │   └── main.js
 │

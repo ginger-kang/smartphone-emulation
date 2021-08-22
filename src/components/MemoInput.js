@@ -1,4 +1,4 @@
-import { ENTER_MEMO } from "../constant.js";
+import { ENTER_MEMO } from "../util/constant.js";
 
 function MemoInput({
   $target,

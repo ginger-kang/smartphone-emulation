@@ -3,7 +3,7 @@ import Header from "./components/Header.js";
 import Home from "./components/Home.js";
 import Memo from "./components/Memo.js";
 import Photo from "./components/Photo.js";
-import { HOME, ALARM, MEMO, PHOTO } from "./constant.js";
+import { HOME, ALARM, MEMO, PHOTO } from "./util/constant.js";
 
 export default function App($app) {
   this.state = {
