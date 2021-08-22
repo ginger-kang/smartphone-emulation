@@ -159,3 +159,16 @@ header {
   width: 100%;
   object-fit: cover;
 }
+
+.app-button {
+  width: 70px;
+  height: 70px;
+  border: none;
+  border-radius: 8px;
+  margin: 12px;
+  cursor: move;
+}
+
+.draggable.dragging {
+  opacity: 0.5;
+}
