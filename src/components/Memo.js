@@ -4,8 +4,6 @@ import MemoInput from "./MemoInput.js";
 function Memo({ $app }) {
   this.memoList = [
     "메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!",
-    "메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!",
-    "메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!",
   ];
   this.memoInputDisplay = false;
 
@@ -17,6 +15,18 @@ function Memo({ $app }) {
 
   const onMemoInputSubmit = inputMemoData => {
     this.setState([...this.memoList, inputMemoData]);
+  };
+
+  const onExpandHandler = e => {
+    const parent = document.querySelector("#memo-list-wrapper");
+
+    for (let i = 0; i < parent.children.length; i++) {
+      if (parent.children[i].style.height === "auto") {
+        parent.children[i].style.height = "2em";
+      }
+    }
+
+    e.target.style.height = "auto";
   };
 
   this.$target = document.createElement("section");
@@ -51,12 +61,11 @@ function Memo({ $app }) {
 
     const memoListWrapper = document.createElement("ul");
     memoListWrapper.id = "memo-list-wrapper";
+    memoListWrapper.addEventListener("click", e => onExpandHandler(e));
     memoListWrapper.innerHTML = this.memoList
       .map(
         memo => `
-          <li class="memo-list">
-            <span class="memo-list-text">${memo}</span>
-          </li>
+          <li class="memo-list">${memo}</li>
         `,
       )
       .join("");
