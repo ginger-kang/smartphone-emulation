@@ -1,10 +1,9 @@
-import { NEW } from "../constant.js";
 import MemoInput from "./MemoInput.js";
+import { getItem, setItem } from "../localStorage.js";
+import { NEW, MEMO_LIST } from "../constant.js";
 
 function Memo({ $app }) {
-  this.memoList = [
-    "메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!",
-  ];
+  this.memoList = getItem(MEMO_LIST) ?? [];
   this.memoInputDisplay = false;
 
   const memoInputDisplayHandler = display => {
@@ -49,6 +48,7 @@ function Memo({ $app }) {
 
   this.setState = nextState => {
     this.memoList = nextState;
+    setItem(MEMO_LIST, nextState);
 
     this.render();
   };

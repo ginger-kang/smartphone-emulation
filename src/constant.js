@@ -2,6 +2,7 @@ const HOME = "home";
 const ALARM = "alarm";
 const ALARM_LIST = "alarm-list";
 const MEMO = "memo";
+const MEMO_LIST = "memo-list";
 const PHOTO = "photo";
 const NEW = "NEW";
 const BACK = "BACK";
@@ -27,6 +28,7 @@ export {
   ALARM,
   ALARM_LIST,
   MEMO,
+  MEMO_LIST,
   PHOTO,
   NEW,
   BACK,
