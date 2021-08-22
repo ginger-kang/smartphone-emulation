@@ -5,6 +5,7 @@ const MEMO = "memo";
 const PHOTO = "photo";
 const NEW = "NEW";
 const BACK = "BACK";
+const ENTER_MEMO = "메모를 입력하세요";
 const MINUTE_OPTIONS = ["00", "10", "20", "30", "40", "50"];
 const HOUR_OPTIONS = [
   "01",
@@ -29,6 +30,7 @@ export {
   PHOTO,
   NEW,
   BACK,
+  ENTER_MEMO,
   MINUTE_OPTIONS,
   HOUR_OPTIONS,
 };

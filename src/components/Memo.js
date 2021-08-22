@@ -1,4 +1,5 @@
 import { NEW } from "../constant.js";
+import MemoInput from "./MemoInput.js";
 
 function Memo({ $app }) {
   this.memoList = [
@@ -6,6 +7,17 @@ function Memo({ $app }) {
     "메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!",
     "메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!메모 테스트!!",
   ];
+  this.memoInputDisplay = false;
+
+  const memoInputDisplayHandler = display => {
+    this.memoInputDisplay = display;
+
+    memoInput.setState(this.memoInputDisplay);
+  };
+
+  const onMemoInputSubmit = inputMemoData => {
+    this.setState([...this.memoList, inputMemoData]);
+  };
 
   this.$target = document.createElement("section");
   this.$target.id = "memo-container";
@@ -13,6 +25,14 @@ function Memo({ $app }) {
   const newButton = document.createElement("button");
   newButton.id = "new-button";
   newButton.innerText = NEW;
+  newButton.addEventListener("click", () => memoInputDisplayHandler(true));
+
+  const memoInput = new MemoInput({
+    $target: this.$target,
+    memoInputDisplay: this.memoInputDisplay,
+    memoInputDisplayHandler,
+    onMemoInputSubmit,
+  });
 
   this.$target.appendChild(newButton);
   $app.appendChild(this.$target);

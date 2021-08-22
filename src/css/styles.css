@@ -98,12 +98,22 @@ header {
 }
 
 .memo-list {
-  padding: 2px;
+  height: 2em;
+  line-height: 1.1;
+  white-space: normal;
+  padding: 1px;
   background-color: white;
   border-top: 1px solid #08428f;
   font-size: medium;
+  overflow: hidden;
 }
 
 .memo-list:last-child {
   border-bottom: 1px solid #08428f;
+}
+
+#memo-input {
+  width: 100%;
+  font-size: large;
+  padding: 2px;
 }

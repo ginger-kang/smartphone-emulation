@@ -13,7 +13,6 @@ export default function App($app) {
     this.setState({
       ...this.state,
       pageName: name,
-      isNewButtonClick: false,
     });
   };
 
