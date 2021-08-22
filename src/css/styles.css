@@ -52,7 +52,8 @@ header {
 }
 
 #alarm-list-wrapper,
-#memo-list-wrapper {
+#memo-list-wrapper,
+#photo-list-wrapper {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -119,4 +120,29 @@ header {
   margin: 0;
   border: 0;
   outline: 1px solid #c4c4c4;
+}
+
+.photo-list {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  margin: 15px 12px;
+  cursor: pointer;
+}
+
+.photo-list img {
+  width: 100%;
+  height: 100%;
+  border-radius: 11px;
+  object-fit: cover;
+}
+
+#photo-list-wrapper {
+  white-space: nowrap;
+  overflow-x: auto;
+}
+
+.selected {
+  border: 4px solid hotpink;
+  border-radius: 11px;
 }
