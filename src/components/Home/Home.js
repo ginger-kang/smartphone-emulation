@@ -1,5 +1,5 @@
-import { getItem, setItem } from "../util/localStorage.js";
-import { ALARM, MEMO, PHOTO, APP_SEQUENCE } from "../util/constant.js";
+import { getItem, setItem } from "../../util/localStorage.js";
+import { ALARM, MEMO, PHOTO, APP_SEQUENCE } from "../../util/constant.js";
 
 function Home({ $app, routeHandler }) {
   this.appSequence = getItem(APP_SEQUENCE) ?? [ALARM, MEMO, PHOTO];

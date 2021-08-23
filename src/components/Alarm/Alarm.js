@@ -1,6 +1,6 @@
 import AlarmInput from "./AlarmInput.js";
-import { getItem, setItem } from "../util/localStorage.js";
-import { NEW, ALARM_LIST } from "../util/constant.js";
+import { getItem, setItem } from "../../util/localStorage.js";
+import { NEW, ALARM_LIST } from "../../util/constant.js";
 
 function Alarm({ $app }) {
   this.alarmList = getItem(ALARM_LIST) ?? [];

@@ -1,6 +1,6 @@
 import MemoInput from "./MemoInput.js";
-import { getItem, setItem } from "../util/localStorage.js";
-import { NEW, MEMO_LIST } from "../util/constant.js";
+import { getItem, setItem } from "../../util/localStorage.js";
+import { NEW, MEMO_LIST } from "../../util/constant.js";
 
 function Memo({ $app }) {
   this.memoList = getItem(MEMO_LIST) ?? [];

@@ -1,8 +1,8 @@
-import Alarm from "./components/Alarm.js";
-import Header from "./components/Header.js";
-import Home from "./components/Home.js";
-import Memo from "./components/Memo.js";
-import Photo from "./components/Photo.js";
+import Alarm from "./components/Alarm/Alarm.js";
+import Header from "./components/Header/Header.js";
+import Home from "./components/Home/Home.js";
+import Memo from "./components/Memo/Memo.js";
+import Photo from "./components/Photo/Photo.js";
 import { getItem, setItem } from "./util/localStorage.js";
 import { getTime } from "./util/utils.js";
 import { HOME, ALARM, MEMO, PHOTO, ALARM_LIST } from "./util/constant.js";

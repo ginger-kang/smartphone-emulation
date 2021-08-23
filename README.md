@@ -38,25 +38,35 @@
 ```plaintext
 ├── src
 │   │
-│   ├── components
+│   ├── components  // 사용자 단에 보여지는 페이지 관리
 │   │   │
-│   │   ├── Alarm.js
+│   │   ├── Alarm   // 알람 앱 페이지
+│   │   │   │
+│   │   │   ├── Alarm.js  // 알람 앱 메인 페이지 관리
+│   │   │   │
+│   │   │   └── AlarmInput.js // 알람 입력 관리
 │   │   │
-│   │   ├── AlarmInput.js
+│   │   ├── Header  // 헤더 부분 관리
+│   │   │   │
+│   │   │   ├── Clock.js  // 헤더에서 항상 표시되는 현재 시간
+│   │   │   │
+│   │   │   └── Header.js // 시간과 뒤로가기 버튼 관리
 │   │   │
-│   │   ├── Clock.js
+│   │   ├── Home  // 홈 화면 관리
+│   │   │   │
+│   │   │   └── Home.js // 홈 화면에 앱들 표시
 │   │   │
-│   │   ├── Header.js
+│   │   ├── Memo  // 메모 페이지
+│   │   │   │
+│   │   │   ├── Memo.js // 메모 메인 페이지 관리
+│   │   │   │
+│   │   │   └── MemoInput.js  // 메모 입력 관리
 │   │   │
-│   │   ├── Home.js
-│   │   │
-│   │   ├── Memo.js
-│   │   │
-│   │   ├── MemoInput.js
-│   │   │
-│   │   ├── Photo.js
-│   │   │
-│   │   └── SelectedPhoto.js
+│   │   └── Photo // 사진 페이지
+│   │       │
+│   │       ├── Photo.js  // 사진 메인 페이지 관리
+│   │       │
+│   │       └── SelectedPhoto.js  // 선택된 사진 표시
 │   │
 │   ├── css
 │   │   │
@@ -64,15 +74,15 @@
 │   │
 │   ├── util
 │   │   │
-│   │   ├── constants.js
+│   │   ├── constants.js  // 문자열 상수나 재사용 가능한 상수들을 모아놓은 곳
 │   │   │
-│   │   ├── localStorage.js
+│   │   ├── localStorage.js // 로컬 스토리지 관리
 │   │   │
-│   │   └── utils.js
+│   │   └── utils.js  // 유틸 함수
 │   │
-│   ├── App.js
+│   ├── App.js  // 각 페이지를 렌더링(라우팅) 하거나 공통적으로 사용되는 로직 관리
 │   │
-│   └── main.js
+│   └── main.js // 초기 App을 렌더링 하는 곳(시작점)
 │
 └── index.html
 ```

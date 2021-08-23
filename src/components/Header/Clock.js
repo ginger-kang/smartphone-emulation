@@ -1,4 +1,4 @@
-import { getTime } from "../util/utils.js";
+import { getTime } from "../../util/utils.js";
 
 function Clock({ $target }) {
   const clockWrapper = document.createElement("span");

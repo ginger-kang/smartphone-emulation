@@ -1,5 +1,5 @@
 import SelectedPhoto from "./SelectedPhoto.js";
-import { PHOTO_LIST } from "../util/constant.js";
+import { PHOTO_LIST } from "../../util/constant.js";
 
 function Photo({ $app }) {
   this.photoList = PHOTO_LIST;
