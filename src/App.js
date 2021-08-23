@@ -20,7 +20,7 @@ export default function App($app) {
   };
 
   const alarmHandler = () => {
-    const alarmList = getItem(ALARM_LIST);
+    const alarmList = getItem(ALARM_LIST) ?? [];
     const currTime = getTime(false);
 
     for (let i = 0; i < alarmList.length; i++) {
