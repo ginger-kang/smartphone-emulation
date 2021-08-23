@@ -66,7 +66,9 @@
 │   │   │
 │   │   ├── constants.js
 │   │   │
-│   │   └── localStorage.js
+│   │   ├── localStorage.js
+│   │   │
+│   │   └── utils.js
 │   │
 │   ├── App.js
 │   │

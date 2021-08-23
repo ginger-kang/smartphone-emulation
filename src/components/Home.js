@@ -21,8 +21,6 @@ function Home({ $app, routeHandler }) {
       }
     }
 
-    console.log(nextSequence);
-
     setItem(APP_SEQUENCE, [...nextSequence]);
     this.setState([...nextSequence]);
   };
@@ -56,8 +54,6 @@ function Home({ $app, routeHandler }) {
       const appButton = document.createElement("button");
       appButton.className = "app-button draggable";
       appButton.setAttribute("draggable", "true");
-
-      console.log(app);
 
       if (app === ALARM) {
         text = "알람";

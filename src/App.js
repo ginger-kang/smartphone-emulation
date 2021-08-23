@@ -3,7 +3,9 @@ import Header from "./components/Header.js";
 import Home from "./components/Home.js";
 import Memo from "./components/Memo.js";
 import Photo from "./components/Photo.js";
-import { HOME, ALARM, MEMO, PHOTO } from "./util/constant.js";
+import { getItem, setItem } from "./util/localStorage.js";
+import { getTime } from "./util/utils.js";
+import { HOME, ALARM, MEMO, PHOTO, ALARM_LIST } from "./util/constant.js";
 
 export default function App($app) {
   this.state = {
@@ -17,10 +19,32 @@ export default function App($app) {
     });
   };
 
+  const alarmHandler = () => {
+    const alarmList = getItem(ALARM_LIST);
+    const currTime = getTime(false);
+
+    for (let i = 0; i < alarmList.length; i++) {
+      if (alarmList[i].slice(3) === currTime) {
+        alert(alarmList[i]);
+        setItem(
+          ALARM_LIST,
+          alarmList.filter((_, index) => index !== i),
+        );
+        this.setState({ ...this.state });
+        break;
+      }
+    }
+  };
+
   const cleanApps = $app => {
     if ($app.childNodes.length > 1) {
       $app.removeChild($app.childNodes[1]);
     }
+  };
+
+  const startClock = (ms, callback) => {
+    callback();
+    return setInterval(callback, ms);
   };
 
   const header = new Header({
@@ -49,5 +73,6 @@ export default function App($app) {
     }
   };
 
+  startClock(1000, alarmHandler);
   this.render();
 }
