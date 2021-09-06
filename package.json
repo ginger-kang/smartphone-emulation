@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "live-server .",
-    "build": "babel src -w -d dist"
+    "build": "babel src -w -d dist",
+    "lint": "eslint src/**/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@babel/cli": "^7.15.4",
     "@babel/core": "^7.15.5",
-    "@babel/preset-env": "^7.15.4"
+    "@babel/preset-env": "^7.15.4",
+    "eslint": "^7.32.0"
   }
 }
