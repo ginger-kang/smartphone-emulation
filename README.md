@@ -37,6 +37,7 @@
 
 ```plaintext
 ├── src
+│   ├── assets // 로컬 사진
 │   │
 │   ├── components  // 사용자 단에 보여지는 페이지 관리
 │   │   │
@@ -96,5 +97,5 @@ $ npm install
 필요한 dependency를 설치하고 아래 명령어로 프로젝트를 실행합니다.
 
 ```
-$ npm run start
+$ npm run dev
 ```
