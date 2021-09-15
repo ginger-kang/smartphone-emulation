@@ -168,6 +168,8 @@ header {
   border-radius: 8px;
   margin: 12px;
   cursor: move;
+  font-size: 30px;
+  background: #eaeaea4f;
 }
 
 .draggable.dragging {

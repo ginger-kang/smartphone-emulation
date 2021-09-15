@@ -12,9 +12,9 @@ function Home({ $app, routeHandler }) {
     let nextSequence = [];
 
     for (let i = 0; i < this.$target.children.length; i++) {
-      if (this.$target.children[i].textContent === "알람") {
+      if (this.$target.children[i].textContent === "⏰") {
         nextSequence.push(ALARM);
-      } else if (this.$target.children[i].textContent === "메모") {
+      } else if (this.$target.children[i].textContent === "📝") {
         nextSequence.push(MEMO);
       } else {
         nextSequence.push(PHOTO);
@@ -56,11 +56,11 @@ function Home({ $app, routeHandler }) {
       appButton.setAttribute("draggable", "true");
 
       if (app === ALARM) {
-        text = "알람";
+        text = "⏰";
       } else if (app === MEMO) {
-        text = "메모";
+        text = "📝";
       } else if (app === PHOTO) {
-        text = "사진";
+        text = "🎆";
       }
 
       appButton.innerText = text;
